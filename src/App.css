@@ -1,38 +1,111 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+/* App layout styles */
 .App {
   text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Title bar styles */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main content area styles */
+.App-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Toggle section styles */
+.Toggle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  overflow: hidden;
+  transition: width 0.3s;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* Expanded toggle section styles */
+.App-main.expanded .Toggle-section {
+  width: 200px;
+  padding: 20px;
+}
+
+/* Toggle switch styles */
+.Toggle-switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.Toggle-switch span {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.Switch-button {
+  width: 40px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #e5e5e5;
+  position: relative;
+}
+
+.Switch-button.checked {
+  background-color: #50c878; /* Change color for checked state */
+}
+
+.Switch-button:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+/* Map container styles */
+.Map-container {
+  flex: 1;
+  width: 80%; /* Adjust width to take up most of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer styles */
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  width: 100%;
 }

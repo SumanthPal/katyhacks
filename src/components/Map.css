@@ -1,0 +1,7 @@
+.Map-container {
+    flex: 1;
+    width: 80%; /* Adjust width to take up most of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
